@@ -5,3 +5,5 @@ print(23%4)
 a= 599//5   
 
 print("Antanui metu ", a)
+
+#this concludes the first lesson
