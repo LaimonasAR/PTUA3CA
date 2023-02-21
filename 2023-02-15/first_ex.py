@@ -25,4 +25,4 @@ result = compare(list_one,list_two)
 print(result)
 
 
-com_list = [sum(item) for item in zip(frsr, scnd)]
+#com_list = [sum(item) for item in zip(frsr, scnd)]
