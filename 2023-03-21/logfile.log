@@ -1,0 +1,23 @@
+2023-03-21 19:42:46 - sLogger - main - DEBUG - This is a debug message
+2023-03-21 21:01:39 - sLogger - frst_assignment - DEBUG - This is a debug message
+2023-03-21 21:06:30 - sLogger - frst_assignment - DEBUG - This is a debug message
+2023-03-21 21:06:30 - sLogger - frst_assignment - INFO - Program started
+2023-03-21 21:06:32 - sLogger - frst_assignment - WARNING - sdf was entered instead of X or O
+2023-03-21 21:06:35 - sLogger - frst_assignment - WARNING - afshtteh was entered instead of X or O
+2023-03-21 21:06:40 - sLogger - frst_assignment - INFO - Symbols chosen
+2023-03-21 21:06:43 - sLogger - frst_assignment - WARNING - fgrgrsg was entered instead of 1 or 0!!
+2023-03-21 21:06:46 - sLogger - frst_assignment - INFO - Turns determined
+2023-03-21 21:06:50 - sLogger - frst_assignment - WARNING - e was enetered instead of integer !!
+2023-03-21 21:06:54 - sLogger - frst_assignment - WARNING - impossible move entered !!
+2023-03-21 21:07:32 - sLogger - frst_assignment - INFO - Program ended succesfully
+2023-03-21 21:08:35 - sLogger - frst_assignment - DEBUG - This is a debug message
+2023-03-21 21:08:35 - sLogger - frst_assignment - INFO - Program started
+2023-03-21 21:08:37 - sLogger - frst_assignment - WARNING - asf was entered instead of X or O
+2023-03-21 21:08:39 - sLogger - frst_assignment - WARNING - afasghd was entered instead of X or O
+2023-03-21 21:08:41 - sLogger - frst_assignment - WARNING - 1123 was entered instead of X or O
+2023-03-21 21:08:44 - sLogger - frst_assignment - INFO - Symbols chosen
+2023-03-21 21:08:50 - sLogger - frst_assignment - WARNING - awdawda was entered instead of 1 or 0!!
+2023-03-21 21:08:55 - sLogger - frst_assignment - INFO - Turns determined
+2023-03-21 21:09:05 - sLogger - frst_assignment - WARNING - impossible move entered !!
+2023-03-21 21:09:07 - sLogger - frst_assignment - WARNING - awdad was enetered instead of integer !!
+2023-03-21 21:09:25 - sLogger - frst_assignment - INFO - Program ended succesfully
