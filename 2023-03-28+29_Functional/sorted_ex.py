@@ -21,6 +21,6 @@ print(sorted(og_list, key=lambda x: x["color"]))
 og_list = [[1, 2, 3], [2, 4, 5], [1, 1, 1]]
 
 og_list2 = [[1, 2, 3], [-2, 4, -5], [1, -1, 1]]
-print(sorted(og_list, key=lambda x: (x[0] + x[1] + x[2])))
+print(sorted(og_list, key=lambda x: (x[0] + x[1] + x[2])))  # sum(x) butu trumpiau :)
 
 print(sorted(og_list2, key=lambda x: (x[0] + x[1] + x[2])))

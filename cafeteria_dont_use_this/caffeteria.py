@@ -63,16 +63,19 @@ class Tables:
             },
         }
 
-    def check_reservetion(self, surname: str):
+    def check_reservetion(self, surname: str) -> bool:
         reserved_table = False
         for table_number, table_data in self.all_tables.items():
             for key, value in table_data.items():
-                if table_data["Reserved"] == True and table_data["Surname"] == surname:
+                if (
+                    table_data["Reserved"] == True
+                    and (table_data["Surname"]).upper() == surname.upper()
+                ):
                     reserved_table = True
                     return reserved_table
         return reserved_table
 
-    def reserve_table(self, type: str, surname: str):
+    def reserve_table(self, type: str, surname: str) -> dict:
         free_table = False
         for table_number, table_data in self.all_tables.items():
             for key, value in table_data.items():
@@ -93,13 +96,13 @@ class Tables:
                 print(key, value)
 
 
-def check_if_reserved(surname):
+def check_if_reserved(surname) -> bool:
     my_table = Tables()
     reserved = my_table.check_reservetion(surname=surname)
     return reserved
 
 
-def reservation(table_type, surname):
+def reservation(table_type, surname) -> None:
     my_table = Tables()
     table = my_table.reserve_table(type=table_type, surname=surname)
     if isinstance(table, dict):
@@ -126,5 +129,5 @@ def main():
 main()
 
 
-print(help(Tables))
+# print(help(Tables))
 # main()

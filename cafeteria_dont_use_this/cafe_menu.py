@@ -11,7 +11,8 @@ menu_items_food = {
 }
 menu_items_drinks={
     "Coca cola":{
-    
+    "Alc": False
+    "Size": "Small"
     },
     "Beer":{
     
@@ -21,4 +22,3 @@ menu_items_drinks={
     },
 
 }   
-3

@@ -1,0 +1,10 @@
+from main import Projektas
+from session import session
+
+projektas1 = session.query(Projektas).get(1)
+projektas1.price = 22000
+session.commit()
+
+projektas2 = session.query(Projektas).filter_by(name="2 projektas").one()
+projektas2.name = "2 projektas tikrai"
+session.commit()
