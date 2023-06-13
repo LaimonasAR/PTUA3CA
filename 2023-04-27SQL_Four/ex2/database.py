@@ -1,5 +1,4 @@
 from sqlalchemy import create_engine
-# from sqlalchemy.orm.decl_api import DeclarativeMeta
 from sqlalchemy.orm import sessionmaker
 from models import User, Data, Base
 
@@ -23,18 +22,27 @@ class SqliteDatabase:
             return None
         except Exception as exception:
             session.rollback()
-            return exception
+            return f"Something went wrong: {exception}"
 
     def create_data(self, **kwargs):
-        object = Data(**kwargs)
-        session = self.session()
-        session.add(object)
-        session.commit()
+        try:
+            object = Data(**kwargs)
+            session = self.session()
+            session.add(object)
+            session.commit()
+            return None
+        except Exception as exception:
+            session.rollback()
+            return f"Something went wrong: {exception}"
 
     def get_user(self, userid):
-        session = self.session()
-        got_user = session.query(User).filter(User.id == userid).one()
-        return got_user
+        try:
+            session = self.session()
+            got_user = session.query(User).filter(User.id == userid).one()
+            return got_user
+        except Exception as exception:
+            session.rollback()
+            return f"Something went wrong: {exception}"
 
     def get_data(self, userid):
         session = self.session()
@@ -45,7 +53,6 @@ class SqliteDatabase:
     def update_data(self, userid, dataid, field, value):
         session = self.session()
         user = session.query(User).get(userid)
-        #user.data[dataid].field = value
         data = user.data[dataid]
         attr_name = field
         attr_value = value
@@ -53,8 +60,11 @@ class SqliteDatabase:
         session.commit()
 
     def delete_data(self, userid, dataid):
-
-        pass
+        session = self.session()
+        user = session.query(User).get(userid)
+        data = user.data[dataid]
+        session.delete(data)
+        session.commit()
 
     def get_users(self):
         session = self.session()

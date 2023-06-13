@@ -38,7 +38,6 @@ def update_data(userid):
 def delete_data(userid):
     dataid = int(input("Which line do You want to delete? "))
     db.delete_data(userid=userid, dataid=dataid)
-    
 
 
 print("Hi please be patient!")
@@ -67,7 +66,8 @@ if user_exists is True and pass_correct is True:
     while True:
         current_user = db.get_user_by_email(login)
         selection = input(
-            """Type '1' to list Your data, 
+            """Type:
+        '1' to list Your data, 
         '2' to enter more data, 
         '3' to edit data, 
         '4' to delete line of data.
@@ -84,3 +84,6 @@ if user_exists is True and pass_correct is True:
         else:
             print("Be carefull, now You'll have to login again!")
             break
+# TODO 
+# ! DO not do this
+
